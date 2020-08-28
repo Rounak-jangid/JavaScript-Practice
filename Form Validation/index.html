@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <div>
+    <form name="myForm" onsubmit="return validate()">
+    <table>
+        <tr>
+            <td>
+                <label for="fname">First Name </label>
+            </td>
+            <td>
+                <input type="text" placeholder="First Name" id="fname" name="fname">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="lname">Last Name </label>
+            </td>
+            <td>
+                <input type="text" placeholder="Last Name" id="lname" name="lname">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="usrnam">Username </label>
+            </td>
+            <td>
+                <input type="text" name="usrnam" id="usrnam" placeholder="Username">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="email">E-Mail </label>
+            </td>
+            <td>
+                <input type="text" name="email" id="email" placeholder="Enter your e-mail" onfocus="showEmail()" onblur="hideEmail()" onkeyup="validateEmail()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="pnum">Mobile Number </label>
+            </td>
+            <td>
+               <input type="number" name="pcode" id="pcode" style="width: 30px;"><input style="width: 203px;" type="number" name="pnum" id="pnum" placeholder="Mobile Number" onkeyup="validateMobile()"><br>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="pwd">Password</label></td>
+            <td><input type="text" name="pwd" id="pwd" placeholder="Password" onkeyup="validatePass()" onfocus="showPass()" onblur="hidePass()"></td>
+        </tr>
+        <tr>
+            <td align="right"></td>
+            <td><input type="submit" name="submit" id="submit"></td>
+        </tr>
+    </table>
+    </form>
+    </div>
+
+    
+    <div id="email_mess" style="width: 23rem; padding: 10px;">
+        <h4>E-mail must contain : </h4>
+        <p id="number" class="invalid"> A <b>number</b>.</p>
+        <p id="exten" class="invalid">  extension <b>@gmail.com</b></p>
+    </div>
+
+    <div id="message" style="width: 23rem; padding: 10px;">
+        <h3>Password must contain the following:</h3>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+        <p id="number1" class="invalid">A <b>number</b></p>
+        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+        <p id="special" class="invalid">A <b>special character</b></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    content: "✔";
+}
+
+.invalid {
+    color: red;
+}
+
+.invalid::before {
+    position: relative;
+    content: "✖";
+}
+
+#email_mess {
+    background-color:#ccc;
+    width: 15rem;
+    display: none;
+}
+
+#message {
+    display: none;
+}
+
+input::-webkit-inner-spin-button, input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input {
+    width: 15rem;
+}
